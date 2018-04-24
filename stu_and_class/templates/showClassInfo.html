@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示班级信息</title>
+</head>
+<body>
+    {% for classroom in class_info %}
+        id: {{ classroom.class_id }}
+        name: <a href="/stuapp/show_specific_stu/?classno={{ classroom.class_id }}">{{ classroom.class_name}}</a>
+        description:{{ classroom.class_des}}
+        <br/>
+    {% endfor %}
+</body>
+</html>
